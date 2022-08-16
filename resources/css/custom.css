@@ -1,0 +1,192 @@
+@import url('../../node_modules/swiper/swiper-bundle.min.css');
+
+article > *:not(.entry-content),
+.entry-content > * {
+    @apply mx-auto max-w-content;
+}
+
+.entry-content, .block-editor-block-list__layout {
+    h1 {
+        @apply text-2xl;
+    }
+
+    h2 {
+        @apply text-xl;
+    }
+
+    h3 {
+        @apply text-lg;
+    }
+
+    p, ul, ol {
+        a {
+            @apply text-blue-500 underline;
+
+            &:hover {
+                @apply no-underline;
+            }
+        }
+
+        @apply mb-8;
+    }
+
+    ul:not(.block-editor-block-variation-picker__variations) {
+        li {
+            @apply list-disc list-inside;
+        }
+    }
+
+    ol {
+        li {
+            @apply list-decimal list-inside;
+        }
+    }
+}
+
+/*** Navigation ****/
+.menu-navigation{
+    @apply hidden lg:block absolute lg:relative top-[65px] lg:top-[unset] left-0 lg:left-[unset] w-full lg:w-auto h-max bg-white  border-b border-[#aab2af] lg:border-none py-4 px-4 lg:px-0 text-center lg:text-left;
+}
+
+.menu-navigation.open{
+    @apply block;
+}
+
+
+a[aria-current="page"]{
+    @apply font-bold;
+}
+
+.nav{
+    @apply block font-light;
+}
+
+.nav-item{
+    @apply block lg:inline-block relative;
+}
+
+.nav-link{
+    @apply block py-2 px-2 mx-1 text-[#4a5052]
+}
+
+.sub-menu{
+    @apply hidden lg:absolute lg:w-[210px] lg:top-full lg:border lg:border-[#aab2af] lg:bg-white lg:py-4 px-2;
+}
+
+.sub-menu.open{
+    @apply block;
+}
+
+.menu-item-has-children:hover > .sub-menu{
+    @apply lg:block;
+}
+
+.menu-item-has-children > a{
+    @apply relative flex justify-center;
+}
+
+.menu-item-has-children > a > .icon-caret.rotate180{
+    @apply rotate-180 translate-y-1;
+}
+ 
+.icon-caret{
+    @apply text-xl -translate-y-[5px] rotate-0;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    @apply text-white;
+}
+
+.swiper-pagination-bullet{
+    @apply w-3 h-3;
+}
+
+.swiper-pagination-bullet-active {
+    @apply bg-[#fdd1bd]
+}
+
+@media(max-width: 960px){
+    .swiper-button-next, .swiper-button-prev {
+        @apply hidden ;
+    }
+}
+
+/* custom grid servicios */
+.grid-servicios{
+    grid-template-areas: "uno dos"
+                         "tres cuatro"
+                         "cinco seis"    
+    ; 
+}
+@media(min-width: 782px){
+    .grid-servicios{
+        /* grid-template-areas: "uno dos cuatro tres"    
+        ; */
+    }
+}
+
+@media(min-width: 782px){
+    .grid-servicios{
+        grid-template-areas: "uno dos tres cuatro cinco seis"    
+        ; 
+    }
+}
+
+.uno{
+    grid-area: uno;
+}
+
+.dos{
+    grid-area: dos;
+}
+
+.tres{
+    grid-area: tres;
+}
+
+.cuatro{
+    grid-area: cuatro;
+}
+
+.cinco{
+    grid-area: cinco;
+}
+
+.seis{
+    grid-area: seis;
+}
+
+.gallery-pagination{
+    @apply text-center py-4;
+}
+
+.contact-input{
+    @apply p-2 border-[0.5px] border-[#ccc] rounded-[6px] w-full focus:outline-[#707070]
+}
+
+.contact-textarea{
+    @apply p-2 border-[0.5px] border-[#ccc] rounded-[6px] w-full focus:outline-[#707070]
+}
+
+.wpcf7-form-control[type="submit"]{
+    @apply block float-right bg-[#fdd1bd] text-[#60726e] px-4 py-3 uppercase tracking-[1px] text-sm font-semibold rounded-3xl hover:opacity-[0.7] w-max
+}
+
+.contact-grid{
+    grid-template-areas: "contact-text"
+                         "contact-form";
+}
+
+@media(min-width:1024px){
+    .contact-grid{
+        grid-template-areas: "contact-form contact-text";
+    }   
+}
+
+.contact-form{
+    grid-area: contact-form;
+}
+
+.contact-text{
+    grid-area: contact-text;
+}
