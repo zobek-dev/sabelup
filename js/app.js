@@ -5208,7 +5208,6 @@
       });
     }
     if (document.querySelector(".modal-swiper-slider")) {
-      console.log("Swiper modal gallery initialized....");
       let galleryModal = new core_default(".modal-swiper-slider", {
         modules: [Pagination, Navigation],
         autoHeight: true,

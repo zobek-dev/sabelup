@@ -85,6 +85,8 @@ function tailpress_nav_menu_add_li_class( $classes, $item, $args, $depth ) {
 
 add_filter( 'nav_menu_css_class', 'tailpress_nav_menu_add_li_class', 10, 4 );
 
+
+
 /**
  * Adds option 'submenu_class' to 'wp_nav_menu'.
  *
@@ -122,5 +124,11 @@ function tailpress_add_menu_link_class( $atts, $item, $args ) {
 add_filter( 'nav_menu_link_attributes', 'tailpress_add_menu_link_class', 1, 3 );
 
 
+if(!function_exists('register_navwalker')):
+  function register_navwalker(){
+    require('inc/tailpress-navwalker.php');
+  }
+endif;  
 
+add_action('after_setup_theme', 'register_navwalker');
 

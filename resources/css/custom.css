@@ -44,13 +44,20 @@ article > *:not(.entry-content),
 }
 
 /*** Navigation ****/
-.menu-navigation{
+/* .menu-navigation{
     @apply hidden lg:block absolute lg:relative top-[65px] lg:top-[unset] left-0 lg:left-[unset] w-full lg:w-auto h-max bg-white  border-b border-[#aab2af] lg:border-none py-4 px-4 lg:px-0 text-center lg:text-left;
-}
+} */
 
+.menu-navigation > .nav{
+  @apply flex space-x-4 items-center;
+}
+.menu-navigation > .nav > li{
+  @apply px-2 py-6 relative;
+}
+/* 
 .menu-navigation.open{
     @apply block;
-}
+} */
 
 
 a[aria-current="page"]{
@@ -70,12 +77,15 @@ a[aria-current="page"]{
 }
 
 .sub-menu{
+  @apply absolute lg:-translate-x-6 lg:px-4 lg:absolute lg:w-[210px] lg:top-full lg:border lg:border-[#aab2af] lg:bg-white lg:py-4 bg-white;
+}
+/* .sub-menu{
     @apply hidden lg:absolute lg:w-[210px] lg:top-full lg:border lg:border-[#aab2af] lg:bg-white lg:py-4 px-2;
 }
 
 .sub-menu.open{
     @apply block;
-}
+} */
 
 .menu-item-has-children:hover > .sub-menu{
     @apply lg:block;

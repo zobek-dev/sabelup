@@ -93,7 +93,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     }
     
     if(document.querySelector('.modal-swiper-slider')){
-        console.log('Swiper modal gallery initialized....')
+        //console.log('Swiper modal gallery initialized....')
         let galleryModal = new Swiper('.modal-swiper-slider', {
             modules: [Pagination, Navigation],
             autoHeight: true,
